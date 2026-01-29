@@ -1,0 +1,59 @@
+:root {
+    --neon: #00ff41;
+    --alert: #ff003c;
+    --cyan: #00d9ff;
+}
+
+body {
+    background-color: #050505;
+    color: var(--neon);
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), #050505;
+    background-size: 100% 3px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    border: 2px solid var(--neon);
+    padding: 40px;
+    background: rgba(0, 20, 0, 0.9);
+    box-shadow: 0 0 20px var(--neon), inset 0 0 10px var(--neon);
+    text-align: center;
+    max-width: 700px;
+}
+
+button {
+    background: transparent;
+    border: 1px solid var(--neon);
+    color: var(--neon);
+    padding: 15px 30px;
+    margin: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: var(--neon);
+    color: #000;
+    box-shadow: 0 0 50px var(--neon); /* The bright light effect */
+}
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border-color: var(--cyan);
+    color: var(--cyan);
+}
+
+.back-btn:hover {
+    background: var(--cyan);
+    box-shadow: 0 0 50px var(--cyan);
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+    <button class="back-btn" onclick="location.href='index.html'">BACK</button>
+    <div class="container" style="border-color:var(--alert);">
+        <h1 style="color:var(--alert);">AIDA MAINFRAME</h1>
+        <p id="log">> STANDBY...</p>
+        <button onclick="hack()">RUN OVERRIDE</button>
+    </div>
+    <script src="game.js"></script>
+    <script>
+        function hack() {
+            if(Game.has('Manual') && Game.has('Password')) {
+                document.getElementById('log').innerText = "> LOG: 11:05PM TARGET ELIMINATED BY AIDA.";
+                Game.collect('Confession');
+            } else { alert("INSUFFICIENT DATA"); }
+        }
+    </script>
+</body>
+</html>

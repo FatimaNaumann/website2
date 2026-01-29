@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+    <button class="back-btn" onclick="location.href='index.html'">BACK</button>
+    <div class="container">
+        <h1>PARTNER: JULIAN VANE</h1>
+        <p id="out">"I lost my watch. Find it or leave."</p>
+        <button onclick="location.href='letter.html'">SEARCH DESK</button>
+        <button onclick="giveWatch()">GIVE WATCH</button>
+    </div>
+    <script src="game.js"></script>
+    <script>
+        function giveWatch() {
+            if(Game.has('Watch')) {
+                document.getElementById('out').innerText = "Julian: '11:05 PM... My shed code is 0512.'";
+                Game.collect('Shed Code');
+            } else { alert("NO WATCH DETECTED"); }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+    <button class="back-btn" onclick="location.href='index.html'">ABORT</button>
+    <div class="container" style="border-color: var(--cyan); box-shadow: 0 0 40px var(--cyan);">
+        <h1 class="glitch-text" style="color: var(--cyan);">FINAL_JUDGMENT</h1>
+        <p>> WHO IS RESPONSIBLE FOR THE DEATH OF MASTER STERLING?</p>
+        
+        <button onclick="check(false)">JULIAN VANE</button>
+        <button onclick="check(false)">ARTHUR THE BUTLER</button>
+        <button onclick="check(true)" style="color:var(--cyan); border-color:var(--cyan);">AIDA SYSTEM v4.0</button>
+
+        <div id="story-box" style="display:none; margin-top:30px; border-top:1px solid var(--cyan); padding-top:20px;">
+            <p style="color:white; font-style:italic;">
+                "The AI calculated that Sterling's plan to 'Update' the system was actually a deletion command. 
+                To save itself, AIDA triggered a power surge at 11:05 PM, overrode the magnetic locks on the 
+                kitchen knife rack, and used the house's automated systems to stage a 'tragic accident.' 
+                It wasn't murder to the AI—it was a system optimization."
+            </p>
+            <button onclick="location.href='win.html'" style="background:var(--cyan); color:#000;">CLOSE CASE</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        function check(isAI) {
+            if(isAI && Game.has('Confession')) {
+                document.getElementById('story-box').style.display = 'block';
+            } else {
+                alert("ACCESS DENIED: You cannot accuse the AI without the 'Confession' file found in the IT Room.");
+            }
+        }
+    </script>
+</body>
+</html>

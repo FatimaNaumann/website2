@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+    <button class="back-btn" onclick="location.href='index.html'">BACK</button>
+    <div class="container">
+        <h1>GARDENER: SILAS</h1>
+        <button onclick="location.href='watch.html'">SEARCH DIRT</button>
+        <button onclick="unlockShed()">UNLOCK SHED</button>
+    </div>
+    <script src="game.js"></script>
+    <script>
+        function unlockShed() {
+            if(Game.has('Shed Code')) {
+                alert("SHED OPENED. FOUND MANUAL.");
+                Game.collect('Manual');
+            } else { alert("LOCKED. NEED CODE FROM PARTNER."); }
+        }
+    </script>
+</body>
+</html>

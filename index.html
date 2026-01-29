@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+    <div class="container">
+        <h1 style="letter-spacing:10px;">STERLING HUB</h1>
+        <button onclick="location.href='wife.html'">WIFE</button>
+        <button onclick="location.href='buisnesspartner.html'">PARTNER</button>
+        <button onclick="location.href='gardener.html'">GARDENER</button>
+        <button onclick="location.href='butler.html'">BUTLER</button>
+        <hr style="border-color:var(--neon); margin:20px 0;">
+        <button id="it-btn" onclick="location.href='it.html'" style="display:none; color:var(--alert); border-color:var(--alert);">HACK SERVER</button>
+        <button id="solve-btn" onclick="location.href='solve.html'" style="display:none; color:var(--cyan); border-color:var(--cyan);">SOLVE CASE</button>
+    </div>
+    <script src="game.js"></script>
+    <script>
+        if(Game.has('Manual') && Game.has('Password')) document.getElementById('it-btn').style.display = 'inline-block';
+        if(Game.has('Confession')) document.getElementById('solve-btn').style.display = 'inline-block';
+    </script>
+</body>
+</html>
+<button onclick="location.href='knife.html'" style="border-style: dashed;">[SCAN AREA FOR BIO-SIGNS]</button>
